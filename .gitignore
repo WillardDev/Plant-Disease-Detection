@@ -1,0 +1,29 @@
+# ---------------------------------------------------------------- dataset
+# Everything under data/ is re-downloadable and totals ~5.8 GB, which is far
+# past what git should be storing. The notebook recreates it from
+# data/plantvillage.zip, so keep the download step, not the files.
+data/
+
+# ------------------------------------------------- trained weights & logs
+# Regenerate by re-running the notebook. Committing binary weights bloats the
+# history permanently — every future commit carries them. If a grader needs the
+# actual model, publish it as a GitHub Release asset instead.
+*.keras
+*.pt
+*.pth
+*.h5
+artifacts/
+training_history.csv
+model_architecture.png
+class_names.json
+
+# ------------------------------------------- Python / Jupyter environment
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# -------------------------------------------------------------------- OS
+.DS_Store
