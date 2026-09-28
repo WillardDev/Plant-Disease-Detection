@@ -2,6 +2,10 @@
 # Everything under data/ is re-downloadable and totals ~5.8 GB, which is far
 # past what git should be storing. The notebook recreates it from
 # data/plantvillage.zip, so keep the download step, not the files.
+#
+# One rule for the whole directory, not data/raw plus data/cache: the zip sits
+# directly in data/, so narrower patterns let a 2 GB blob through. GitHub
+# rejects any file over 100 MB, so one missed file blocks the whole push.
 data/
 
 # ------------------------------------------------- trained weights & logs
